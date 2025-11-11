@@ -134,6 +134,7 @@ pub mod structs {
     #[cfg(feature = "use_alloc")]
     pub use crate::rciter_impl::RcIter;
     pub use crate::repeatn::RepeatN;
+    pub use crate::singleton::Singleton;
     #[allow(deprecated)]
     pub use crate::sources::{Iterate, Unfold};
     pub use crate::take_while_inclusive::TakeWhileInclusive;
@@ -166,6 +167,7 @@ pub use crate::minmax::MinMaxResult;
 pub use crate::peeking_take_while::PeekingNext;
 pub use crate::process_results_impl::process_results;
 pub use crate::repeatn::repeat_n;
+pub use crate::singleton::{IntoSingleton, singleton};
 #[allow(deprecated)]
 pub use crate::sources::{iterate, unfold};
 #[allow(deprecated)]
@@ -240,6 +242,7 @@ mod with_position;
 mod zip_eq_impl;
 mod zip_longest;
 mod ziptuple;
+mod singleton;
 
 #[macro_export]
 /// Create an iterator over the “cartesian product” of iterators.
